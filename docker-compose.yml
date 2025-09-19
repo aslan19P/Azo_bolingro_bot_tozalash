@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  userbot:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./sessions:/app/sessions
+    restart: unless-stopped
+    command: python -m userbot.cleaner
