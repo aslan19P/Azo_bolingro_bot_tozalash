@@ -9,3 +9,5 @@ services:
       - ./sessions:/app/sessions
     restart: unless-stopped
     command: python -m userbot.cleaner
+    stdin_open: true  # аналог docker run -i
+    tty: true         # аналог docker run -t
